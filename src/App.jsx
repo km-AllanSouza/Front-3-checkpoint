@@ -47,6 +47,7 @@ function App() {
 
       setNomefilme('')
       setCapaFilme('')
+      setFormularioErro(false)
 
     }
 
@@ -61,6 +62,7 @@ function App() {
 
       setNomefilme('')
       setCapaFilme('')
+      setFormularioErro(false)
 
     }
 
@@ -80,20 +82,17 @@ function App() {
             <label htmlFor="capaFilme">Capa do Filme(URL) </label>
             <input type="text" id="capaFilme" value={capaFilme} onChange={event => setCapaFilme(event.target.value)} />
           </div>
-
-          {
-            formularioErro ? (
-              <span>Por favor, verifique os dados inseridos no formulário</span>
-            ) : null
-          }
-
           <div>
             <button type='submit'>Cadastrar Filme</button>
             {/* <button type='reset'>Limpar formulário</button> */}
           </div>
         </form>
       </div>
-
+      {
+        formularioErro ? (
+          <span>Por favor, verifique os dados inseridos no formulário</span>
+        ) : null
+      }
       <div>
         <h1>Filmes Favoritos</h1>
         <ul className="filmes-listados">
