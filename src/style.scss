@@ -1,9 +1,30 @@
 body {
-    background-color: rgba(216, 204, 204, 0.548);
+    background-color: rgba(22, 97, 78, 0.651);
 }
 main {
-    padding: 10px;
+    padding: 20px;
 }
 img {
-    max-width: 300px;
+    max-width: 500px;
+    max-height: 300px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+button {
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+input{
+    margin: 3px;
+}
+
+span {
+    font-size: 30px;
+    color: purple;
 }
