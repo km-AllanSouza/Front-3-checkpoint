@@ -36,7 +36,8 @@ function App() {
     }
 
 
-    if (nomeFilme === '' || nomeFilme.length <= 2 || nomeFilme.indexOf(' ') === 0) {
+    if (nomeFilme === '' || nomeFilme.length <= 2 || nomeFilme.indexOf(' ') === 0
+      || capaFilme === '' || capaFilme.length <= 6 || capaFilme.indexOf(' ') === 0) {
 
       // alert("Existem erros no nome do filme.")
       setFormularioErro(true)
@@ -50,22 +51,6 @@ function App() {
       setFormularioErro(false)
 
     }
-
-    if (capaFilme === '' || capaFilme.length <= 6 || capaFilme.indexOf(' ') === 0) {
-
-      // alert("Existem erros na URL do filme.")
-      setFormularioErro(true)
-
-    } else {
-
-      setListaFilme([...ListaFilme, novoFilmeCadastrado])
-
-      setNomefilme('')
-      setCapaFilme('')
-      setFormularioErro(false)
-
-    }
-
     //console.log(ListaFilme)
   }
 
